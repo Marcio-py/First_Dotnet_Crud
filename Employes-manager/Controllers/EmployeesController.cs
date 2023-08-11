@@ -6,7 +6,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Employes_manager.Controllers
 {
-
     public class EmployeesController : Controller
     {
         private readonly MVCDemoDbContext mvcDemoDbContext;
@@ -45,7 +44,7 @@ namespace Employes_manager.Controllers
             };
             await mvcDemoDbContext.Employees.AddAsync(employee);
             await mvcDemoDbContext.SaveChangesAsync();
-            return RedirectToAction("Add");
+            return RedirectToAction("Index");
         }
     }
 }
